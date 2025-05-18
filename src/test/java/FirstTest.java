@@ -24,5 +24,4 @@ public class FirstTest extends BaseTest {
         boolean regBtnIsPresent = browser.findElement(By.xpath("//input[@value='Register']")).isDisplayed();
         assertTrue(regBtnIsPresent);
     }
-
 }

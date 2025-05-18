@@ -3,11 +3,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 import parent.BaseTest;
-
 import java.util.List;
-
 import static org.testng.Assert.assertEquals;
-
 
 public class RegisterTest extends BaseTest {
     @Test
@@ -18,9 +15,7 @@ public class RegisterTest extends BaseTest {
         browser.findElement(By.xpath("//*[text()='Delete']")).click();
         List<WebElement> list = browser.findElements(By.xpath("//*[text()='Delete']"));
         assertEquals(list.size(), 1);
-
     }
-
 
     @Test
     public void dropDownCheck() {
@@ -28,8 +23,6 @@ public class RegisterTest extends BaseTest {
         WebElement dropdown = browser.findElement(By.id("dropdown"));
         Select select = new Select(dropdown);
         select.selectByIndex(1);
-        //select.selectByVisibleText("Option 1");
-        //  assertTrue(browser.findElement(By.cssSelector("option[value='1']")).getAttribute("selected").equals("true"));
-        assertEquals(select.getFirstSelectedOption().getText(),"Option 1");
+        assertEquals(select.getFirstSelectedOption().getText(), "Option 1");
     }
 }
